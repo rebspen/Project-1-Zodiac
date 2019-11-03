@@ -1,12 +1,16 @@
 class Starsign {
+    
     constructor(num, game){
         this.game = game
         this.num = num
         this.name = ""
         this.element = {}
         this.image = ""    
+        this.imageToDraw = new Image();
     }
 
+   
+    
     getStarSignAttributes(){
         this.name = ""
         this.element = {}
@@ -24,7 +28,7 @@ class Starsign {
                 emerald: 0 
             }
             this.image = "https://image.flaticon.com/icons/svg/47/47156.svg"
-      
+            
             break;
             case 2:
             this.name = "Taurus"
@@ -38,7 +42,7 @@ class Starsign {
                 emerald: 30 
             }
             this.image = "https://image.flaticon.com/icons/svg/47/47073.svg"
-              
+            
             break;
             case 3:
             this.name = "Gemini"
@@ -66,14 +70,15 @@ class Starsign {
             }
             this.image = "https://image.flaticon.com/icons/svg/47/47156.svg"         
         }
+        this.imageToDraw.src = this.image;
     }
-
+    
     draw(){
-        const image = new Image();
-        image.src = this.image;
-        const imageHeight = image.height;
-        const imageWidth = image.width;
-        game.context.drawImage(image, 187 , 187, imageWidth, imageHeight);
+        
+        const imageHeight = this.imageToDraw.height;
+        const imageWidth = this.imageToDraw.width;
+        game.context.drawImage(this.imageToDraw, 187 , 187, imageWidth, imageHeight);
+        
     }
 }
 
