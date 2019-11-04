@@ -6,6 +6,7 @@ class Game {
         this.height = $canvas.height;
         this.width = $canvas.width;
         this.starsign = new Starsign(num, this);
+        this.asteroid = new Asteroid(this);
         this.starsign.getStarSignAttributes(this.num);
         this.controls = new Controls(this);
         this.controls.setControls();
@@ -45,10 +46,26 @@ class Game {
         }   
         for (let i = 0; i < this.gems.length; i++) {
             this.gems[i].draw();
-        }   
+        } 
+        this.asteroid.draw();  
     }
     
     updateElements(timestamp){
+
+        this.asteroid.update()
+
+        if (this.elements !== []){
+            for (let i = 0; i < this.elements.length; i++) {
+                this.elements[i].update()
+            }
+        }
+
+        if (this.elements !== []){
+            for (let i = 0; i < this.gems.length; i++) {
+                this.gems[i].update()
+            }
+        }
+
         if (this.elements !== []){
             if (this.elements.length > 25){
                 this.elements.splice(0,1);

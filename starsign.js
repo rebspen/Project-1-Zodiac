@@ -38,7 +38,7 @@ class Starsign {
                 moonstone:0
 
              }
-            this.image = ""
+            this.image = "Game Images/aries-zodiac-symbol-of-frontal-goat-head.png"
             
             break;
             case 2:
@@ -61,7 +61,7 @@ class Starsign {
                 moonstone:0
 
            }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-taurus.png"
+            this.image = "Game Images/taurus-zodiac-symbol-of-bull-head-front.png"
             
             break;
             case 3:
@@ -84,7 +84,7 @@ class Starsign {
                 moonstone:0
 
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-gemini.png"   
+            this.image = "Game Images/gemini-zodiac-symbol-of-two-twins-faces (1).png"   
 
             break;
             case 4:
@@ -107,7 +107,7 @@ class Starsign {
                 moonstone:0
 
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-cancer.png"   
+            this.image = "Game Images/crab-cancer-symbol.png"   
 
             break;
             case 5:
@@ -131,7 +131,7 @@ class Starsign {
 
      
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-leo.png"   
+            this.image = "Game Images/leo-astrological-sign.png"   
 
             break;
             case 6:
@@ -155,7 +155,7 @@ class Starsign {
 
     
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-virgo.png"   
+            this.image = "/Game Images/virgo-zodiac-symbol.png"   
 
             break;
             case 7:
@@ -179,7 +179,7 @@ class Starsign {
 
     
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-libra.png"   
+            this.image = "/Game Images/libra-scale-balance-symbol.png"   
 
             break;
             case 8:
@@ -203,7 +203,7 @@ class Starsign {
 
     
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-scorpio.png"   
+            this.image = "/Game Images/scorpio-vertical-animal-shape-of-zodiac-symbol.png"   
 
             break;
             case 9:
@@ -227,7 +227,7 @@ class Starsign {
 
     
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-sagittarius.png"   
+            this.image = "/Game Images/sagittarius-arch-and-arrow-symbol.png"   
             break;
             case 10:
             this.name = "Capricorn"
@@ -250,7 +250,7 @@ class Starsign {
 
     
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-capricorn.png"   
+            this.image = "/Game Images/capricorn.png"   
             break;
             case 11:
             this.name = "Aquarius"
@@ -272,7 +272,7 @@ class Starsign {
                 moonstone:0
     
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-aquarius.png"   
+            this.image = "/Game Images/aquarius-zodiac-sign-symbol.png"   
             break;
             case 12:
             this.name = "Pisces"
@@ -294,7 +294,7 @@ class Starsign {
                 moonstone:30
     
             }
-            this.image = "https://www.horoscope.com/images-US/signs/profile-pisces.png"   
+            this.image = "/Game Images/pisces-astrological-sign-symbol.png"   
             break;
             
             default:
@@ -317,7 +317,7 @@ class Starsign {
                 moonstone:0
 
             }
-            this.image = "https://image.flaticon.com/icons/svg/47/47156.svg"         
+            this.image = "/Game Images/aries-zodiac-symbol-of-frontal-goat-head.png"         
         }
         this.imageToDraw.src = this.image;
     }
@@ -325,7 +325,7 @@ class Starsign {
     draw(){ 
         const imageHeight = this.imageToDraw.height;
         const imageWidth = this.imageToDraw.width;
-        game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth *0.06, imageHeight * 0.06);
+        game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth *0.3, imageHeight * 0.3);
         
     }
     
