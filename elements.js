@@ -8,6 +8,7 @@ class Element {
         const c = Math.floor(Math.random() * 5);
         this.x = a
         this.y = b
+        this.radius = 10
         const types = ["fire", "earth", "wind", "water", "air"]
         this.type = types[c]
     }
@@ -25,7 +26,10 @@ class Element {
             } else {
                 game.context.fillStyle = "yellow"    
             }
-            game.context.fillRect(this.x, this.y, 20, 20);
+            game.context.beginPath();
+            game.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            game.context.closePath();
+            game.context.fill();
         }
     }
     

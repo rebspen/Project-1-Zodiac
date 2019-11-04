@@ -7,6 +7,9 @@ class Starsign {
         this.element = {}
         this.image = ""    
         this.imageToDraw = new Image();
+        this.radius = 15
+        this.x = 187
+        this.y = 187
     }
 
    
@@ -73,12 +76,15 @@ class Starsign {
         this.imageToDraw.src = this.image;
     }
     
-    draw(){
-        
+    draw(){ 
         const imageHeight = this.imageToDraw.height;
         const imageWidth = this.imageToDraw.width;
-        game.context.drawImage(this.imageToDraw, 187 , 187, imageWidth, imageHeight);
+        game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth, imageHeight);
         
+    }
+    
+    checkCollision(a, b){
+        return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2) < a.radius + b.radius;
     }
 }
 
