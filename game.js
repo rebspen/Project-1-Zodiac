@@ -96,7 +96,7 @@ class Game {
         
     
     drawGrid() {
-        this.context.strokeStyle = 'red';
+        this.context.strokeStyle = 'white';
         this.context.beginPath();
         this.context.arc(200, 200, 200, 0, 2 * Math.PI);
         this.context.closePath();

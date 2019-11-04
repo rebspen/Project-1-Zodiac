@@ -5,11 +5,11 @@ class Element {
         this.game = game;
         const a = Math.floor(Math.random() * 800) - 200;
         const b = Math.floor(Math.random() * 800) - 200;
-        const c = Math.floor(Math.random() * 5);
+        const c = Math.floor(Math.random() * 4);
         this.x = a
         this.y = b
         this.radius = 10
-        const types = ["fire", "earth", "wind", "water", "air"]
+        const types = ["fire", "earth", "water", "air"]
         this.type = types[c]
     }
     
@@ -19,9 +19,7 @@ class Element {
                 game.context.fillStyle = "red";
             } else if (this.type === "earth"){
                 game.context.fillStyle = "green";
-            } else if (this.type === "wind"){
-                game.context.fillStyle = "grey";
-            }else if (this.type === "water"){
+            } else if (this.type === "water"){
                 game.context.fillStyle = "blue";
             } else {
                 game.context.fillStyle = "yellow"    

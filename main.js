@@ -1,5 +1,3 @@
-
-
 //start game
 
 window.onload = function() {

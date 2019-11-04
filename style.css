@@ -1,6 +1,7 @@
 body {
     padding: 0;
     text-align: center;
+    background-color: #232741
   }
   
   .game-intro {
@@ -22,8 +23,7 @@ body {
   }
   
   canvas{
-      border: 1px solid black
-  }
+      border: 1px solid white  }
 
 #star-sign-button {
     font-size: 30px;

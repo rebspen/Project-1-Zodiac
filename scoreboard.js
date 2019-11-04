@@ -10,7 +10,7 @@ class Scoreboard {
         const highScore = this.game.highScore;
         
         context.font = '10px monospace';
-        context.fillStyle = 'black';
+        context.fillStyle = 'white';
         
         context.fillText(`Score: ${score}`, 170, 350);
         context.fillText(`High Score: ${highScore}`, 170, 370);

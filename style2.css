@@ -6,8 +6,14 @@ canvas{
     vertical-align: bottom; 
 } 
 
+#game-board{
+    border: 1px solid white;
+    z-index: -1;
+    position: relative;
+}
+
 #particles-js{ 
-    position:absolute; 
+    position: absolute;
     width: 100%; 
     height: 100%; 
     background-color: #232741; 
