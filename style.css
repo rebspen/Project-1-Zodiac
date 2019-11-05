@@ -21,8 +21,25 @@ h2 {
   color: white;
 }
 
+h3 {
+  color: white;
+  font-size: 0.7em;
+}
+
+p {
+  color: white;
+}
+
 canvas{
   border: 1px solid white;
+}
+
+img{
+  width: 20px
+}
+
+.controls {
+  width: 50px;
 }
 
 #star-sign-button {
@@ -60,8 +77,16 @@ canvas{
   display: none;
 }
 
+#game-board{
+  padding: 0 20px;
+}
+
+#guide{
+  margin-left: 20px;
+}
+
 .game-intro {
-  padding: 20px 70px;
+  padding: 20px 50px;
   /* display: flex;
   flex-direction: column;
   justify-content: center; */

@@ -7,9 +7,13 @@ window.onload = function() {
 const birthday = {}
 let num = 0
 let $sign = document.querySelector('h2');
-let $start = document.getElementById("start-button")
-let $reset = document.getElementById("reset-button")
-let $signbtn = document.getElementById("star-sign-button")
+let $start = document.getElementById("start-button");
+let $reset = document.getElementById("reset-button");
+let $signbtn = document.getElementById("star-sign-button");
+let $fire = document.getElementById("fire");
+let $earth = document.getElementById("earth");
+let $air = document.getElementById("air");
+let $water = document.getElementById("water");
 let name = ""
 const $canvas = document.querySelector('canvas');
 let game;
@@ -64,6 +68,11 @@ document.getElementById("star-sign-button").onclick = function() {
     game =  new Game($canvas, num);  
     $sign.innerText = name
     $start.style.display = "block"
+    $fire.innerText = game.starsign.element.fire
+    $earth.innerText = game.starsign.element.earth
+    $air.innerText = game.starsign.element.air
+    $water.innerText = game.starsign.element.water
+
 
 }
 
