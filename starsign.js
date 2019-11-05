@@ -8,8 +8,8 @@ class Starsign {
         this.image = ""    
         this.imageToDraw = new Image();
         this.radius = 20
-        this.x = 187
-        this.y = 187
+        this.x = 237
+        this.y = 237
     }
 
    

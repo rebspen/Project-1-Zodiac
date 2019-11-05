@@ -1,12 +1,21 @@
 class Asteroid {
     constructor(game){
         this.game = game
-        const a = Math.floor(Math.random() * 800) - 400;
-        const b = Math.floor(Math.random() * 800) - 400;
-        this.x= 25
-        this.y = 25
-        this.vx= 5
+        const a = Math.floor(Math.random() * 600)-590;
+        const b = Math.floor(Math.random() * 600)-590;
+        const c = Math.floor(Math.random() * 10)-15;
+        const d = Math.floor(Math.random() * 10)-15;
+        const e = Math.floor(Math.random() * 3);
+        const f = Math.floor(Math.random() * 3);
+        const arr1 =[a,c]
+        const arr2 =[b,d]
+        this.x= arr1[f]
+        this.y = arr2[e]
+        this.vx= 3
         this.vy= 2
+        const widths = [0.5, 1, 0.7]
+        const g = Math.floor(Math.random() * 4);
+        this.width = widths[g]
         this.imageToDraw = new Image();
         this.image = "Game Images/meteor.png"
     }
@@ -15,20 +24,29 @@ class Asteroid {
         this.imageToDraw.src = this.image
         const imageHeight = this.imageToDraw.height;
         const imageWidth = this.imageToDraw.width;
-        game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth , imageHeight);
-        
+        game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth * this.width , imageHeight * this.width);    
     }
 
     update() {
         this.x += this.vx;
         this.y += this.vy;
-        if (this.y + this.vy > 800 || this.y + this.vy < -800) {
-        this.vy *= -1;
       }
-      if (this.x + this.vx > 800 || this.x + this.vx < -800) {
-        this.vx *= -1;
-      }
-      }
+
+      moveDown(){
+        this.vy = 6
+    }
+
+    moveUp(){
+        this.vy = -6
+    }
+
+    moveLeft(){
+        this.vx = -6
+    }
+
+    moveRight(){
+        this.vx = 6
+    }
       
       
         

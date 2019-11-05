@@ -12,7 +12,7 @@ class Scoreboard {
         context.font = '10px monospace';
         context.fillStyle = 'white';
         
-        context.fillText(`Score: ${score}`, 170, 350);
-        context.fillText(`High Score: ${highScore}`, 170, 370);
+        context.fillText(`Score: ${score}`, 220, 450);
+        context.fillText(`High Score: ${highScore}`, 220, 470);
     }
 }

@@ -18,7 +18,7 @@ class Element {
     }
     
     draw(){
-        if( this.x > -20 && this.x < 410 && this.y > -20 && this.y < 410){
+        if( this.x > -20 && this.x < 510 && this.y > -20 && this.y < 510){
             if(this.type === "fire"){
                 this.image = "Game Images/fire.png";
             } else if (this.type === "earth"){
@@ -42,18 +42,18 @@ class Element {
     }
     
     moveDown(){
-        this.vy = 5
+        this.vy = 3
     }
 
     moveUp(){
-        this.vy = -5
+        this.vy = -3
     }
 
     moveLeft(){
-        this.vx = -5
+        this.vx = -3
     }
 
     moveRight(){
-        this.vx = 5
+        this.vx = 3
     }
 }

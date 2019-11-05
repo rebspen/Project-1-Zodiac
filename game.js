@@ -6,7 +6,7 @@ class Game {
         this.height = $canvas.height;
         this.width = $canvas.width;
         this.starsign = new Starsign(num, this);
-        this.asteroid = new Asteroid(this);
+        this.asteroid = []
         this.starsign.getStarSignAttributes(this.num);
         this.controls = new Controls(this);
         this.controls.setControls();
@@ -16,6 +16,8 @@ class Game {
         this.speed = 300
         this.gemTimer = 0
         this.gemspeed = 1000
+        this.asteroidTimer = 0
+        this.asteroidSpeed = 2000
         this.interval;
         this.score = 0
         this.highScore = 0
@@ -33,11 +35,12 @@ class Game {
     animation (timestamp) {
         this.drawEverything();
         this.updateElements(timestamp)
+        console.log(this.asteroid)
         window.requestAnimationFrame((timestamp) => this.animation(timestamp));
     }
     
     drawEverything(){
-        this.context.clearRect(0, 0, 400, 400);
+        this.context.clearRect(0, 0, 500, 500);
         this.drawGrid()
         this.starsign.draw()
         this.scoreboard.draw()
@@ -47,12 +50,13 @@ class Game {
         for (let i = 0; i < this.gems.length; i++) {
             this.gems[i].draw();
         } 
-        this.asteroid.draw();  
+        for (let i = 0; i < this.asteroid.length; i++) {
+            this.asteroid[i].draw();  
+        } 
+        
     }
     
     updateElements(timestamp){
-
-        this.asteroid.update()
 
         if (this.elements !== []){
             for (let i = 0; i < this.elements.length; i++) {
@@ -63,6 +67,12 @@ class Game {
         if (this.elements !== []){
             for (let i = 0; i < this.gems.length; i++) {
                 this.gems[i].update()
+            }
+        }
+
+        if (this.asteroid !== []){
+            for (let i = 0; i < this.asteroid.length; i++) {
+                this.asteroid[i].update()
             }
         }
 
@@ -90,6 +100,20 @@ class Game {
                     this.gemTimer = timestamp;
                 }
             }
+
+            if (this.asteroid !== []){
+                if (this.asteroid.length > 30){
+                    this.asteroid.splice(0,1);
+                }
+            }
+
+            if (this.asteroid.length < 32){
+                if(this.asteroidTimer < timestamp - this.asteroidSpeed){
+                    this.asteroid.push(new Asteroid(this));
+                    this.asteroidTimer = timestamp;
+                }
+            }
+
             
             for (let i = 0; i < this.elements.length; i++) {
                 if (this.starsign.checkCollision(this.starsign, this.elements[i])) {
@@ -115,7 +139,7 @@ class Game {
     drawGrid() {
         this.context.strokeStyle = 'white';
         this.context.beginPath();
-        this.context.arc(200, 200, 200, 0, 2 * Math.PI);
+        this.context.arc(250, 250, 250, 0, 2 * Math.PI);
         this.context.closePath();
         this.context.stroke();
     }   

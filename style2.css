@@ -2,6 +2,7 @@ body{ margin:0;
     font:normal 75% Arial, Helvetica, sans-serif; 
 } 
 canvas{ 
+    margin-top: 6em;
     display: block; 
     vertical-align: bottom; 
 } 
@@ -14,8 +15,8 @@ canvas{
 
 #particles-js{ 
     position: absolute;
-    width: 100%; 
-    height: 100%; 
+    width: 500px; 
+    height: 500px; 
     background-color: #232741; 
     background-repeat: no-repeat; 
     background-size: 20%; 

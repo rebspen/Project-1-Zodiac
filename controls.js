@@ -15,6 +15,9 @@ class Controls {
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].moveRight()
                 }
+                for(let i = 0; i < game.asteroid.length; i++){
+                    this.game.asteroid[i].moveRight()
+                }
                 break;
                 //RIGHT
                 case 39:
@@ -23,6 +26,9 @@ class Controls {
                 }
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].moveLeft()
+                }
+                for(let i = 0; i < game.asteroid.length; i++){
+                    this.game.asteroid[i].moveLeft()
                 }
                 
                 break;
@@ -34,6 +40,9 @@ class Controls {
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].moveDown()
                 }
+                for(let i = 0; i < game.asteroid.length; i++){
+                    this.game.asteroid[i].moveDown()
+                }
                 break;
                 //DOWN
                 case 40:
@@ -42,6 +51,9 @@ class Controls {
                 }
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].moveUp()
+                }
+                for(let i = 0; i < game.asteroid.length; i++){
+                    this.game.asteroid[i].moveUp()
                 }
                 break;
             }
@@ -60,6 +72,10 @@ class Controls {
                     this.game.gems[i].vy = 0
                     this.game.gems[i].vx = 1
                 }
+                for(let i = 0; i < game.asteroid.length; i++){
+                    this.game.asteroid[i].vy = 1
+                    this.game.asteroid[i].vx = 4
+                }
                 break;
                 //RIGHT
                 case 39:
@@ -70,6 +86,10 @@ class Controls {
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].vy = 0
                     this.game.gems[i].vx = -1
+                }
+                for(let i = 0; i < game.asteroid.length; i++){
+                    this.game.asteroid[i].vy = -1
+                    this.game.asteroid[i].vx = -4
                 }
                 break;
                 //UP
@@ -82,6 +102,10 @@ class Controls {
                     this.game.gems[i].vy = 1
                     this.game.gems[i].vx = 0
                 }
+                for(let i = 0; i < game.asteroid.length; i++){
+                    this.game.asteroid[i].vy = 4
+                    this.game.asteroid[i].vx = 1
+                }
                 break;
                 //DOWN
                 case 40:
@@ -92,6 +116,10 @@ class Controls {
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].vy = -1
                     this.game.gems[i].vx = 0
+                }
+                for(let i = 0; i < game.asteroid.length; i++){
+                    this.game.asteroid[i].vy = -4
+                    this.game.asteroid[i].vx = -1
                 }
                 break;
             }
