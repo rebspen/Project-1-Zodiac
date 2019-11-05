@@ -17,11 +17,12 @@ class Game {
         this.gemTimer = 0
         this.gemspeed = 1000
         this.asteroidTimer = 0
-        this.asteroidSpeed = 2000
+        this.asteroidSpeed = 500
         this.interval;
         this.score = 0
         this.highScore = 0
         this.scoreboard = new Scoreboard(this)
+        this.finish = false
     }
     
     start(){
@@ -34,9 +35,13 @@ class Game {
     
     animation (timestamp) {
         this.drawEverything();
-        this.updateElements(timestamp)
-        console.log(this.asteroid)
-        window.requestAnimationFrame((timestamp) => this.animation(timestamp));
+        this.updateElements(timestamp);
+        const animation = window.requestAnimationFrame((timestamp) => this.animation(timestamp));
+        if (this.finish){
+            window.cancelAnimationFrame(animation);
+            this.end()
+
+        }
     }
     
     drawEverything(){
@@ -132,10 +137,49 @@ class Game {
                     this.gems.splice(i, 1);
                 }
             }
+
+            for (let i = 0; i < this.asteroid.length; i++) {
+                if (this.starsign.checkCollision(this.starsign, this.asteroid[i])) {
+                    this.stop();
+                }
+            }
         }
     }
         
+    stop(){
+        this.finish = true;
+    }
+
+    end(){
+        this.context.clearRect(0, 0, 500, 500);
+        this.drawGrid()
+        this.scoreboard.horoscope();
+        if (this.score> this.highScore){
+         this.highScore = this.score
+        }
+        this.scoreboard.draw()
+        $reset.style.display = "inline-block"
+        $signbtn.innerText = "choose new date"
+    }
+
+    reset(){
+        $signbtn.innerText = "your sign is..."
+        $reset.style.display = "none"
+        this.asteroid = [];
+        this.elements = [];
+        this.gems = [];
+        this.elementTimer = 0
+        this.speed = 300
+        this.gemTimer = 0
+        this.gemspeed = 1000
+        this.asteroidTimer = 0
+        this.asteroidSpeed = 500
+        this.score = 0 
+        this.finish = false
+    }
     
+
+
     drawGrid() {
         this.context.strokeStyle = 'white';
         this.context.beginPath();

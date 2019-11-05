@@ -16,6 +16,7 @@ class Asteroid {
         const widths = [0.5, 1, 0.7]
         const g = Math.floor(Math.random() * 4);
         this.width = widths[g]
+        this.radius = 60 * this.width 
         this.imageToDraw = new Image();
         this.image = "Game Images/meteor.png"
     }
