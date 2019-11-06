@@ -161,6 +161,7 @@ class Game {
         this.scoreboard.draw()
         $reset.style.display = "inline-block"
         $signbtn.innerText = "choose new date"
+        this.horoscope.random()
     }
 
     reset(){
@@ -177,7 +178,6 @@ class Game {
         this.asteroidSpeed = 500
         this.score = 0 
         this.finish = false
-        this.horoscope.random()
     }
     
 

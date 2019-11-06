@@ -3,19 +3,25 @@ class Horoscope {
         this.game = game;
         this.num = game.num;
         this.random();
-        this.ran = 0 
-        this.chooseH() 
+        this.ran = 0  
         this.arr;
+        this.a1;
+        this.a2;
+        this.a3;
+        this.a4;
+        this.a5;
+        this.a6;
+    }
+    
+    random(){
+        this.ran = Math.floor(Math.random()*4);
+        this.chooseH()
         this.a1 = this.arr[this.ran].a1;
         this.a2 = this.arr[this.ran].a2;
         this.a3 = this.arr[this.ran].a3;
         this.a4 = this.arr[this.ran].a4;
         this.a5 = this.arr[this.ran].a5;
         this.a6 = this.arr[this.ran].a6;
-    }
-    
-    random(){
-        this.ran = Math.floor(Math.random()*4);
     }
     
     draw(){
@@ -45,7 +51,7 @@ class Horoscope {
             this.arr = [{
                 a1: "Ease up, my horny friend. Learn " ,
                 a2: "to use your beguiling charm and ",
-                a3: "wit to its best advantage and you",
+                a3: "wit to your best advantage and you",
                 a4: "may not need to lower your head",
                 a5: "and take aim at the nearest target",
                 a6: "in order to achieve your goal."
@@ -62,7 +68,7 @@ class Horoscope {
             {
                 a1: "Just because an old situation is" ,
                 a2: "water under the bridge doesn’t",
-                a3: " mean you should grab an innertube",
+                a3: "mean you should grab an innertube",
                 a4: "and go for a swim. Leave it alone",
                 a5: "and find a new puddle to play in",
                 a6: ""
@@ -87,7 +93,7 @@ class Horoscope {
                 a3: "do not miss out on making a connection",
                 a4: "with the attractive stranger",
                 a5: "that wants to play the matador ",
-                a6: "for the feisty Bull."
+                a6: "for this feisty Bull."
             },
             {
                 a1: "Channel your methodical planning" ,
