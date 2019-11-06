@@ -96,13 +96,28 @@ img{
   display: none;
 }
 
+#sound{
+  font-size: 10px;
+  background-color:purple;
+  color: #fff;
+  padding: 5px 5px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+#sound img{
+  width: 10px;
+}
+
 .game-board{
   padding: 0 20px;
 }
 
 #guide{
   margin-left: 20px;
-  margin-top: 9px;
+  margin-top: 5px;
 }
 
 #guide p , img{

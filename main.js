@@ -1,7 +1,6 @@
 //start game
 
 window.onload = function() {
-
 };
 
 const birthday = {}
@@ -21,10 +20,25 @@ let name = ""
 const $canvas = document.querySelector('canvas');
 let game;
 
-console.dir($traits)
+console.dir(document.getElementById("sound-pic"))
+
+let audio = new Audio("Solar Empire - Beneath The Stars (Atmospheric Ambient Mix) pt3.mp3")
+
+document.getElementById("sound-pic").onclick = function() {
+    if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+        document.getElementById("sound-pic").src = "http://127.0.0.1:5502/Game%20Images/speaker%20(3).png"
+        audio.paused()
+    } else{
+        document.getElementById("sound-pic").src = "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"
+        audio.play()
+    }
+
+}
 
 
 document.getElementById("star-sign-button").onclick = function() {
+    audio.play().loop
+
     birthday.month = document.getElementById("date").valueAsDate.getMonth()
     birthday.date = document.getElementById("date").valueAsDate.getDate()
 

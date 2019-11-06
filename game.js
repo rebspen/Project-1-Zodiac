@@ -127,6 +127,8 @@ class Game {
                     const value = this.starsign.element[ele];
                     this.score += value ;
                     this.elements.splice(i, 1);
+                    let sound = new Audio("/Blop-Mark_DiAngelo-79054334.mp3");
+                    sound.play()
                 }
             }
             
@@ -136,11 +138,15 @@ class Game {
                     const value = this.starsign.element[ele];
                     this.score += value;
                     this.gems.splice(i, 1);
+                    let sound = new Audio("/shooting_star-Mike_Koenig-1132888100.mp3");
+                    sound.play()
                 }
             }
 
             for (let i = 0; i < this.asteroid.length; i++) {
                 if (this.starsign.checkCollision(this.starsign, this.asteroid[i])) {
+                    let sound = new Audio("/Bite-SoundBible.com-2056759375.mp3");
+                    sound.play()
                     this.stop();
                 }
             }

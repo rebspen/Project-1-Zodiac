@@ -20,13 +20,13 @@ class Scoreboard {
         const context = this.game.context;
         context.font = '18px monospace';
         context.fillStyle = 'white';
-        context.fillText(`Welcome ${game.starsign.name}!`, 100, 200);
-        context.fillText(`Good luck on your adventure `, 100, 220);
-        context.fillText(`have a look at the sidebar `,100, 240);
-        context.fillText(`to see what element you`,100, 260);
-        context.fillText(`need to collect --->`,100, 280);
-        context.fillText(`Look out for your lucky `,100, 300);
-        context.fillText(`gem and avoid asteroids!`,100, 320);
+        context.fillText(`Welcome ${game.starsign.name}!`, 100, 180);
+        context.fillText(`Good luck on your adventure `, 100, 200);
+        context.fillText(`have a look at the sidebar `,100, 220);
+        context.fillText(`to see what element you`,100, 240);
+        context.fillText(`need to collect --->`,100, 260);
+        context.fillText(`Look out for your lucky `,100, 280);
+        context.fillText(`gem and avoid asteroids!`,100, 300);
         context.fillText(`If you collect enough there`,100, 320);
          
     }
