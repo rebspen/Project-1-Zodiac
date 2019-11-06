@@ -42,18 +42,18 @@ class Element {
     }
     
     moveDown(){
-        this.vy = 3
+        this.vy = 5
     }
 
     moveUp(){
-        this.vy = -3
+        this.vy = -5
     }
 
     moveLeft(){
-        this.vx = -3
+        this.vx = -5
     }
 
     moveRight(){
-        this.vx = 3
+        this.vx = 5
     }
 }

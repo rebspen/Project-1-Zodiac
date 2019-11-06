@@ -14,12 +14,14 @@ let $fire = document.getElementById("fire");
 let $earth = document.getElementById("earth");
 let $air = document.getElementById("air");
 let $water = document.getElementById("water");
+let $gem = document.getElementById("gem");
+let $gemname = document.getElementById("gem-name");
+let $traits = document.getElementById("traits");
 let name = ""
 const $canvas = document.querySelector('canvas');
 let game;
 
-console.log($start) 
-console.dir($start)    
+console.dir($traits)
 
 
 document.getElementById("star-sign-button").onclick = function() {
@@ -72,8 +74,14 @@ document.getElementById("star-sign-button").onclick = function() {
     $earth.innerText = game.starsign.element.earth
     $air.innerText = game.starsign.element.air
     $water.innerText = game.starsign.element.water
+    $gemname.innerText = game.starsign.element.name
+    $traits.innerHTML = game.starsign.element.traits
+    console.log(game.starsign.element)
 
-
+    $gem.src = game.starsign.element.pic
+    game.context.clearRect(0, 0, 500, 500);
+    game.drawGrid()
+    game.scoreboard.intro();
 }
 
 

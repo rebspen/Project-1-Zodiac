@@ -9,6 +9,7 @@ class Game {
         this.asteroid = []
         this.starsign.getStarSignAttributes(this.num);
         this.controls = new Controls(this);
+        this.horoscope = new Horoscope(this)
         this.controls.setControls();
         this.elements = [];
         this.gems = [];
@@ -153,7 +154,7 @@ class Game {
     end(){
         this.context.clearRect(0, 0, 500, 500);
         this.drawGrid()
-        this.scoreboard.horoscope();
+        this.horoscope.draw();
         if (this.score> this.highScore){
          this.highScore = this.score
         }
@@ -176,6 +177,7 @@ class Game {
         this.asteroidSpeed = 500
         this.score = 0 
         this.finish = false
+        this.horoscope.random()
     }
     
 

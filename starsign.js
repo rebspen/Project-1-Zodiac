@@ -35,7 +35,11 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: 'http://127.0.0.1:5502/Game%20Images/diamond.png',
+                name: "Diamond",
+                traits: "Ambitious <br> Independent <br> Impatient"
+                
 
              }
             this.image = "Game Images/aries-zodiac-symbol-of-frontal-goat-head.png"
@@ -58,7 +62,10 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/emerald.png", 
+                name: "Emerald",
+                traits: "Dependable <br> Musical <br> Practical"
 
            }
             this.image = "Game Images/taurus-zodiac-symbol-of-bull-head-front.png"
@@ -81,7 +88,10 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/emerald.png",
+                name: "Emerald",
+                traits: "Curious <br> Affectionate <br> Kind"
 
             }
             this.image = "Game Images/gemini-zodiac-symbol-of-two-twins-faces (1).png"   
@@ -104,7 +114,10 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/ruby.png",
+                name: "Ruby",
+                traits: "Intuitive <br> Emotional <br> Passionate"
 
             }
             this.image = "Game Images/crab-cancer-symbol.png"   
@@ -127,7 +140,10 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/carnelian.png",
+                name: "Carnelian",
+                traits: "Proud <br> Bold <br> Ambitious"
 
      
             }
@@ -151,7 +167,10 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/peridot.png",
+                name: "Peridot",
+                traits: "Graceful <br> Organised <br> Kind" 
 
     
             }
@@ -175,7 +194,10 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/sapphire.png",
+                name: "Sapphire",
+                traits: "Diplomatic <br> Artistic <br> Intelligent"
 
     
             }
@@ -199,7 +221,10 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/opal.png",
+                name: "Opal",
+                traits: "Seductive <br> Passionate <br> Independent" 
 
     
             }
@@ -223,7 +248,10 @@ class Starsign {
                 topaz: 30,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/topaz.png",
+                name: "Topaz",
+                traits: "Adventurous <br> Creative <br> Strong Willed" 
 
     
             }
@@ -244,9 +272,12 @@ class Starsign {
                 sapphire: 0,
                 opal: 0,
                 topaz: 0,
-                lapiz: 0,
+                lapiz: 30,
                 amethyst: 0,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/lapiz.png",
+                name: "Lapiz",
+                traits: "Detail-Orientated <br> Intelligent <br> Hard Working" 
 
     
             }
@@ -269,7 +300,9 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 30,
-                moonstone:0
+                moonstone:0,
+                pic: "http://127.0.0.1:5502/Game%20Images/amethyst.png",
+                name: "Amethyst" 
     
             }
             this.image = "/Game Images/aquarius-zodiac-sign-symbol.png"   
@@ -291,7 +324,10 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:30
+                moonstone:30,
+                pic: "http://127.0.0.1:5502/Game%20Images/moonstone.png",
+                name: "Moonstone",
+                traits: "Imaginative <br> Idealistic <br> Intuitive" 
     
             }
             this.image = "/Game Images/pisces-astrological-sign-symbol.png"   
@@ -314,7 +350,12 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0
+                moonstone: 0,
+                pic: "http://127.0.0.1:5502/Game%20Images/diamond.png",
+                name: "Diamond",
+                traits: "Creative <br> Sensitive <br> Artistic"
+            
+            
 
             }
             this.image = "/Game Images/aries-zodiac-symbol-of-frontal-goat-head.png"         

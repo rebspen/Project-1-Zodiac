@@ -34,19 +34,19 @@ class Asteroid {
       }
 
       moveDown(){
-        this.vy = 6
+        this.vy = 10
     }
 
     moveUp(){
-        this.vy = -6
+        this.vy = -10
     }
 
     moveLeft(){
-        this.vx = -6
+        this.vx = -10
     }
 
     moveRight(){
-        this.vx = 6
+        this.vx = 10
     }
       
       
