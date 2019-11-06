@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0;
 }
 
 h1 {
@@ -32,6 +33,15 @@ p {
 
 canvas{
   border: 1px solid white;
+}
+
+.particles-js-canvas-el{
+  height: 500px !important;;
+  width: 500px !important;;
+  margin : none;
+  position: absolute;
+  right: 290px;
+  border: none !important;
 }
 
 img{
@@ -86,7 +96,7 @@ img{
   display: none;
 }
 
-#game-board{
+.game-board{
   padding: 0 20px;
 }
 
@@ -117,6 +127,7 @@ input[type="date"] {
   position:relative;
   padding:1rem 0.1rem 1rem 0.75rem;
   margin-bottom: 20px;
+  
   
   font-size:1rem;
   font-family:'Space Mono', monospace;
