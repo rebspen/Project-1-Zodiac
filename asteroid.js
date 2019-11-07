@@ -22,10 +22,13 @@ class Asteroid {
     }
 
     draw(){
+        game.context.shadowBlur = 20;
+        game.context.shadowColor = "black";
         this.imageToDraw.src = this.image
         const imageHeight = this.imageToDraw.height;
         const imageWidth = this.imageToDraw.width;
-        game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth * this.width , imageHeight * this.width);    
+        game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth * this.width , imageHeight * this.width); 
+        game.context.shadowColor = "transparent";   
     }
 
     update() {

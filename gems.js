@@ -44,10 +44,13 @@ class Gem {
             } else if(this.type === "moonstone") {
                 this.image = "/Game Images/moonstone.png";
             }
+            game.context.shadowBlur = 10;
+            game.context.shadowColor = "silver";
             this.imageToDraw.src = this.image
             const imageHeight = this.imageToDraw.height;
             const imageWidth = this.imageToDraw.width;
             game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth *0.2, imageHeight * 0.2);
+            game.context.shadowColor = "transparent";
         }
     }
 

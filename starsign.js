@@ -11,6 +11,7 @@ class Starsign {
         this.x = 237
         this.y = 237
         this.direction = ""
+        this.glow = 0
     }
 
    
@@ -367,10 +368,21 @@ class Starsign {
     }
     
     draw(){ 
+        this.glowing();
         const imageHeight = this.imageToDraw.height;
         const imageWidth = this.imageToDraw.width;
+        game.context.shadowBlur = this.glow;
+        game.context.shadowColor = "silver";
         game.context.drawImage(this.imageToDraw, this.x , this.y, imageWidth *0.3, imageHeight * 0.3);
-        
+        game.context.shadowColor = "transparent";
+    }
+
+    glowing(){
+         if (this.game.score > 0){
+            this.glow = 20
+        } else {
+            this.glow = 0 
+        }
     }
     
     checkCollision(a, b){
