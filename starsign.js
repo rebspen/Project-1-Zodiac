@@ -302,7 +302,8 @@ class Starsign {
                 amethyst: 30,
                 moonstone:0,
                 pic: "http://127.0.0.1:5502/Game%20Images/amethyst.png",
-                name: "Amethyst" 
+                name: "Amethyst", 
+                traits: "Imaginative <br> Idealistic <br> Intuitive" 
     
             }
             this.image = "/Game Images/aquarius-zodiac-sign-symbol.png"   
@@ -327,7 +328,7 @@ class Starsign {
                 moonstone:30,
                 pic: "http://127.0.0.1:5502/Game%20Images/moonstone.png",
                 name: "Moonstone",
-                traits: "Imaginative <br> Idealistic <br> Intuitive" 
+                traits: "Creative <br> Sensitive <br> Idealistic" 
     
             }
             this.image = "/Game Images/pisces-astrological-sign-symbol.png"   

@@ -27,7 +27,6 @@ class Scoreboard {
         context.fillText(`need to collect --->`,100, 260);
         context.fillText(`Look out for your lucky `,100, 280);
         context.fillText(`gem and avoid asteroids!`,100, 300);
-        context.fillText(`If you collect enough there`,100, 320);
          
     }
 }

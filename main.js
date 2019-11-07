@@ -24,12 +24,12 @@ console.dir(document.getElementById("sound-pic"))
 
 let audio = new Audio("Solar Empire - Beneath The Stars (Atmospheric Ambient Mix) pt3.mp3")
 
-document.getElementById("sound-pic").onclick = function() {
-    if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
-        document.getElementById("sound-pic").src = "http://127.0.0.1:5502/Game%20Images/speaker%20(3).png"
+document.getElementById("sound").onclick = function() {
+    if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
+        document.getElementById("sound-pic").src = "https://zodiaction.netlify.com/Game%20Images/speaker%20(3).png"
         audio.pause()
     } else{
-        document.getElementById("sound-pic").src = "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"
+        document.getElementById("sound-pic").src = "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"
         audio.play()
     }
 
@@ -37,12 +37,19 @@ document.getElementById("sound-pic").onclick = function() {
 
 
 document.getElementById("star-sign-button").onclick = function() {
-    audio.play().loop
+
+   document.getElementById("sound-pic").src ="https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"
+        audio.play()
+   
 
     birthday.month = document.getElementById("date").valueAsDate.getMonth()
     birthday.date = document.getElementById("date").valueAsDate.getDate()
 
+    console.log(birthday.month);
+    console.log(birthday.date);
+
     $reset.style.display = "none"
+    $signbtn.style.display = "none"
 
     if(birthday.month === 2 && birthday.date >= 21 || birthday.month === 3 && birthday.date <= 19 ){
         num = 1;
@@ -56,7 +63,7 @@ document.getElementById("star-sign-button").onclick = function() {
     } else if (birthday.month === 5 && birthday.date >= 21 || birthday.month === 6 && birthday.date <= 22 ){
         num = 4;
         name = "Cancer";
-    } else if (birthday.month === 5 && birthday.date >= 23 || birthday.month === 7 && birthday.date <= 22 ){
+    } else if (birthday.month === 6 && birthday.date >= 23 || birthday.month === 7 && birthday.date <= 22 ){
         num = 5;
         name = "Leo";
     } else if (birthday.month === 7 && birthday.date >= 22 || birthday.month === 8 && birthday.date <= 22 ){
@@ -71,10 +78,10 @@ document.getElementById("star-sign-button").onclick = function() {
     } else if (birthday.month === 10 && birthday.date >= 22 || birthday.month === 11 && birthday.date <= 21 ){
         num = 9;
         name = "Sagittarius";
-    } else if (birthday.month === 11 && birthday.date >= 22 || birthday.month === 1 && birthday.date <= 19 ){
+    } else if (birthday.month === 11 && birthday.date >= 22 || birthday.month === 0 && birthday.date <= 19 ){
         num = 10;
         name = "Capricorn";
-    } else if (birthday.month === 5 && birthday.date >= 20 || birthday.month === 7 && birthday.date <= 18 ){
+    } else if (birthday.month === 0 && birthday.date >= 20 || birthday.month === 1 && birthday.date <= 18 ){
         num = 11;
         name = "Aquarius";
     } else {

@@ -128,11 +128,11 @@ class Game {
                     this.score += value ;
                     this.elements.splice(i, 1);
                     if (value > 0) {
-                        if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                        if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
                         let sound = new Audio("/Blop-Mark_DiAngelo-79054334.mp3");
                         sound.play()}
                     } else {
-                        if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                        if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
                         let noise = new Audio("/Laser-SoundBible.com-602495617.mp3");
                         noise.play()} 
                     }
@@ -148,13 +148,13 @@ class Game {
                 this.score += value;
                 this.gems.splice(i, 1);
                 if (value === 30) {
-                    if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                    if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
                     let sound = new Audio("/shooting_star-Mike_Koenig-1132888100.mp3");
                     sound.play()
                 }
             }
                 if (value === 0){
-                    if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                    if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
                     let noise = new Audio("/Laser-SoundBible.com-602495617.mp3");
                     noise.play()
                 } 
@@ -164,7 +164,7 @@ class Game {
         
         for (let i = 0; i < this.asteroid.length; i++) {
             if (this.starsign.checkCollision(this.starsign, this.asteroid[i])) {
-                if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
                 let sound = new Audio("/Bite-SoundBible.com-2056759375.mp3");
                 sound.play()
             }
@@ -180,31 +180,33 @@ stop(){
 
 end(){
     this.context.clearRect(0, 0, 500, 500);
-    this.drawGrid()
+    this.drawGrid();
     this.horoscope.draw();
     if (this.score> this.highScore){
         this.highScore = this.score
     }
-    this.scoreboard.draw()
-    $reset.style.display = "inline-block"
-    $signbtn.innerText = "choose new date"
-    this.horoscope.random()
+    this.scoreboard.draw();
+    $reset.style.display = "inline-block";
+    $signbtn.style.display = "inline-block";
+    $signbtn.innerText = "choose new date";
+    this.horoscope.random();
 }
 
 reset(){
     $signbtn.innerText = "your sign is..."
     $reset.style.display = "none"
+    $signbtn.style.display = "none";
     this.asteroid = [];
     this.elements = [];
     this.gems = [];
-    this.elementTimer = 0
-    this.speed = 300
-    this.gemTimer = 0
-    this.gemspeed = 1000
-    this.asteroidTimer = 0
-    this.asteroidSpeed = 500
-    this.score = 0 
-    this.finish = false
+    this.elementTimer = 0;
+    this.speed = 300;
+    this.gemTimer = 0;
+    this.gemspeed = 1000;
+    this.asteroidTimer = 0;
+    this.asteroidSpeed = 500;
+    this.score = 0;
+    this.finish = false;
 }
 
 
