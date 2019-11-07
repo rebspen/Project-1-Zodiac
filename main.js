@@ -20,17 +20,17 @@ let name = ""
 const $canvas = document.querySelector('canvas');
 let game;
 
-console.dir(document.getElementById("sound-pic"))
+console.dir(document.getElementById("sound-pic"));
 
-let audio = new Audio("Solar Empire - Beneath The Stars (Atmospheric Ambient Mix) pt3.mp3")
+let audio = new Audio("Solar Empire - Beneath The Stars (Atmospheric Ambient Mix) pt3.mp3");
 
 document.getElementById("sound").onclick = function() {
     if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
         document.getElementById("sound-pic").src = "https://zodiaction.netlify.com/Game%20Images/speaker%20(3).png"
-        audio.pause()
+        audio.pause();
     } else{
         document.getElementById("sound-pic").src = "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"
-        audio.play()
+        audio.play();
     }
 
 }
@@ -39,17 +39,17 @@ document.getElementById("sound").onclick = function() {
 document.getElementById("star-sign-button").onclick = function() {
 
    document.getElementById("sound-pic").src ="https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"
-        audio.play()
+        audio.play();
    
 
-    birthday.month = document.getElementById("date").valueAsDate.getMonth()
-    birthday.date = document.getElementById("date").valueAsDate.getDate()
+    birthday.month = document.getElementById("date").valueAsDate.getMonth();
+    birthday.date = document.getElementById("date").valueAsDate.getDate();
 
     console.log(birthday.month);
     console.log(birthday.date);
 
-    $reset.style.display = "none"
-    $signbtn.style.display = "none"
+    $reset.style.display = "none";
+    $signbtn.style.display = "none";
 
     if(birthday.month === 2 && birthday.date >= 21 || birthday.month === 3 && birthday.date <= 19 ){
         num = 1;

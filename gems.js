@@ -15,6 +15,7 @@ class Gem {
     this.type = types[c]
     this.imageToDraw = new Image();
     this.image = ""
+    this.direction = "s"
 
     }
 

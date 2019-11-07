@@ -66,21 +66,22 @@ class Horoscope {
                 
             },
             {
-                a1: "Just because an old situation is" ,
-                a2: "water under the bridge doesn’t",
-                a3: "mean you should grab an innertube",
-                a4: "and go for a swim. Leave it alone",
-                a5: "and find a new puddle to play in",
+                a1: "Dance like no one’s watching, sing like" ,
+                a2: "you’re in the shower, but text like your",
+                a3: "grandmother is reading every single one.",
+                a4: "That goes double for pics. Granny doesn’t ",
+                a5: "want to see your bits... ",
                 a6: ""
+                
                 
             },
             {
-                a1: "It’s time for a good, long look into " ,
-                a2: "your soul. Bring a flashlight and some",
-                a3: "snacks, because this could take awhile.",
-                a4: "Remember to pick up all your litter",
-                a5: "afterward, otherwise an empty chip bag",
-                a6: "could cause an existential crisis."
+                a1: "A work situation has you worried." ,
+                a2: "Relax. Your boss did join Instagram,",
+                a3: "but he probably won’t recognize his",
+                a4: "own car in all your ‘arty’ nude photos.",
+                a5: "Still wouldn’t hurt to freshen up ",
+                a6: "your resume’, just in case..."
                 
             }];
             

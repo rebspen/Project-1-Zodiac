@@ -10,6 +10,7 @@ class Starsign {
         this.radius = 20
         this.x = 237
         this.y = 237
+        this.direction = ""
     }
 
    
@@ -31,6 +32,7 @@ class Starsign {
                 ruby: 0,
                 carnelian: 0,
                 peridot: 0,
+                sapphire: 0,
                 opal: 0,
                 topaz: 0,
                 lapiz: 0,
@@ -374,6 +376,11 @@ class Starsign {
     checkCollision(a, b){
         return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2) < a.radius + b.radius;
     }
+
+    gemBounce(){
+
+    }
+
 }
 
 

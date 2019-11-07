@@ -31,10 +31,6 @@ p {
   color: white;
 }
 
-canvas{
-  border: 1px solid white;
-}
-
 .particles-js-canvas-el{
   height: 500px !important;;
   width: 500px !important;;

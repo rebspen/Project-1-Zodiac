@@ -16,7 +16,7 @@ class Asteroid {
         const widths = [0.5, 1, 0.7]
         const g = Math.floor(Math.random() * 4);
         this.width = widths[g]
-        this.radius = 60 * this.width 
+        this.radius = 70 * this.width 
         this.imageToDraw = new Image();
         this.image = "Game Images/meteor.png"
     }
@@ -33,20 +33,20 @@ class Asteroid {
         this.y += this.vy;
       }
 
-      moveDown(){
-        this.vy = 10
+    moveDown(){
+        this.vy = 15
     }
 
     moveUp(){
-        this.vy = -10
+        this.vy = -15
     }
 
     moveLeft(){
-        this.vx = -10
+        this.vx = -15
     }
 
     moveRight(){
-        this.vx = 10
+        this.vx = 15
     }
       
       

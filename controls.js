@@ -9,11 +9,14 @@ class Controls {
             switch (event.keyCode) {
                 //LEFT
                 case 37:
+                        this.game.starsign.direction = "w"
                 for(let i = 0; i < game.elements.length; i++){
                     this.game.elements[i].moveRight()
                 }
+        
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].moveRight()
+                    this.game.gems[i].direction = "e"
                 }
                 for(let i = 0; i < game.asteroid.length; i++){
                     this.game.asteroid[i].moveRight()
@@ -21,11 +24,14 @@ class Controls {
                 break;
                 //RIGHT
                 case 39:
+                        this.game.starsign.direction = "e"
                 for(let i = 0; i < game.elements.length; i++){
                     this.game.elements[i].moveLeft()
                 }
+             
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].moveLeft()
+                    this.game.gems[i].direction = "w"
                 }
                 for(let i = 0; i < game.asteroid.length; i++){
                     this.game.asteroid[i].moveLeft()
@@ -34,11 +40,14 @@ class Controls {
                 break;
                 //UP
                 case 38:
+                        this.game.starsign.direction = "n"
                 for(let i = 0; i < game.elements.length; i++){
                     this.game.elements[i].moveDown()
                 }
+             
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].moveDown()
+                    this.game.gems[i].direction = "s"
                 }
                 for(let i = 0; i < game.asteroid.length; i++){
                     this.game.asteroid[i].moveDown()
@@ -46,11 +55,14 @@ class Controls {
                 break;
                 //DOWN
                 case 40:
+                        this.game.starsign.direction = "s"
                 for(let i = 0; i < game.elements.length; i++){
                     this.game.elements[i].moveUp()
                 }
+        
                 for(let i = 0; i < game.gems.length; i++){
                     this.game.gems[i].moveUp()
+                    this.game.gems[i].direction = "n"
                 }
                 for(let i = 0; i < game.asteroid.length; i++){
                     this.game.asteroid[i].moveUp()
@@ -73,8 +85,8 @@ class Controls {
                     this.game.gems[i].vx = 3
                 }
                 for(let i = 0; i < game.asteroid.length; i++){
-                    this.game.asteroid[i].vy = 2
-                    this.game.asteroid[i].vx = 7
+                    this.game.asteroid[i].vy = 3
+                    this.game.asteroid[i].vx = 10
                 }
                 break;
                 //RIGHT
@@ -88,8 +100,8 @@ class Controls {
                     this.game.gems[i].vx = -3
                 }
                 for(let i = 0; i < game.asteroid.length; i++){
-                    this.game.asteroid[i].vy = -2
-                    this.game.asteroid[i].vx = -7
+                    this.game.asteroid[i].vy = -3
+                    this.game.asteroid[i].vx = -10
                 }
                 break;
                 //UP
@@ -103,8 +115,8 @@ class Controls {
                     this.game.gems[i].vx = 0
                 }
                 for(let i = 0; i < game.asteroid.length; i++){
-                    this.game.asteroid[i].vy = 7
-                    this.game.asteroid[i].vx = 2
+                    this.game.asteroid[i].vy = 10
+                    this.game.asteroid[i].vx = 3
                 }
                 break;
                 //DOWN
@@ -118,8 +130,8 @@ class Controls {
                     this.game.gems[i].vx = 0
                 }
                 for(let i = 0; i < game.asteroid.length; i++){
-                    this.game.asteroid[i].vy = -7
-                    this.game.asteroid[i].vx = -2
+                    this.game.asteroid[i].vy = -10
+                    this.game.asteroid[i].vx = -3
                 }
                 break;
             }

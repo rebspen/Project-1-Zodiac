@@ -35,6 +35,7 @@ class Game {
     }
     
     animation (timestamp) {
+        console.log(this.starsign.direction)
         this.drawEverything();
         this.updateElements(timestamp);
         const animation = window.requestAnimationFrame((timestamp) => this.animation(timestamp));
@@ -145,17 +146,18 @@ class Game {
             if (this.starsign.checkCollision(this.starsign, this.gems[i])) {
                 const ele = this.gems[i].type;
                 const value = this.starsign.element[ele];
-                this.score += value;
-                this.gems.splice(i, 1);
                 if (value === 30) {
+                    this.score += value;
+                    this.gems.splice(i, 1);
                     if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
-                    let sound = new Audio("/shooting_star-Mike_Koenig-1132888100.mp3");
+                    let sound = new Audio("/pin_dropping-Brian_Rocca-2084700791.mp3");
                     sound.play()
                 }
             }
                 if (value === 0){
+                    this.bounceBack(this.starsign, this.gems[i]);
                     if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
-                    let noise = new Audio("/Laser-SoundBible.com-602495617.mp3");
+                    let noise = new Audio("/Glass Breaking-SoundBible.com-1765179538.mp3");
                     noise.play()
                 } 
             }
@@ -213,10 +215,28 @@ reset(){
 
 drawGrid() {
     this.context.strokeStyle = 'white';
+    this.context.strokeRect(0, 0, 500, 500);
+    this.context.strokeRect(10, 10, 480, 480);
     this.context.beginPath();
-    this.context.arc(250, 250, 250, 0, 2 * Math.PI);
+    this.context.arc(250, 250, 240, 0, 2 * Math.PI);
     this.context.closePath();
     this.context.stroke();
-}   
+} 
+
+bounceBack(starsign, gem){
+    if (gem.direction === "s" && starsign.direction === "n"){
+        gem.vy = -5
+        gem.vx = 0
+    } else if (gem.direction === "e" && starsign.direction === "w"){
+        gem.vy = 0
+        gem.vx = -5
+    } else if (gem.direction === "n" && starsign.direction === "s"){
+        gem.vy = 5
+        gem.vx = 0
+    } else {
+        gem.vy = 0
+        gem.vx = 5
+    }
+}
 
 }
