@@ -287,19 +287,19 @@ class Horoscope {
                 a6: ""
             },
             {
-                a1: "If you're planning to spend the weekend" ,
-                a2: "rearranging your silverware drawer you",
-                a3: "may be past the point of rehabilitation.",
-                a4: "Still you should make the effort to break",
-                a5: "out of your self-imposed box and learn to",
-                a6: "experience the full range of life's adventures."
+                a1: "You’ve brought a banana to a" ,
+                a2: "gunfight, but that’s okay. The",
+                a3: "other person brought granola and milk.",
+                a4: "Turns out you’re both really bad",
+                a5: "at identifying weaponry, but",
+                a6: "excellent at breakfast."
                 
             },
             {
-                a1: "You can ask the stars for advice, but they don’t" ,
-                a2: "really know anything. Except for Tom Hanks.",
-                a3: "He knows quite a lot. On Tuesday,",
-                a4: "do whatever he does.",
+                a1: "You can ask the stars for advice, but" ,
+                a2: "they don’t really know anything.",
+                a3: "Except for Tom Hanks. He knows quite",
+                a4: "a lot. On Tuesday, do whatever he does.",
                 a5: "",
                 a6: ""
                 
@@ -325,12 +325,12 @@ class Horoscope {
                 a6: ""
             },
             {
-                a1: "If the CIA is serious about wanting to learn" ,
-                a2: "how to deal with terrorists they should study",
-                a3: "the get even tactics used by a group of angry ",
-                a4: "Scorpios. Your jealousy will be put to the  ",
-                a5: "test in the coming weeks as parties bring you ",
-                a6: "back in contact with some people from your past."
+                a1: "You’ve brought a banana to a" ,
+                a2: "gunfight, but that’s okay. The",
+                a3: "other person brought granola and milk.",
+                a4: "Turns out you’re both really bad",
+                a5: "at identifying weaponry, but",
+                a6: "excellent at breakfast."
                 
             },
             {
@@ -448,10 +448,10 @@ class Horoscope {
                 
             },
             {
-                a1: "You can ask the stars for advice, but they don’t" ,
-                a2: "really know anything. Except for Tom Hanks.",
-                a3: "He knows quite a lot. On Tuesday,",
-                a4: "do whatever he does.",
+                a1: "You can ask the stars for advice, but" ,
+                a2: "they don’t really know anything.",
+                a3: "Except for Tom Hanks. He knows quite",
+                a4: "a lot. On Tuesday, do whatever he does.",
                 a5: "",
                 a6: ""
                 
