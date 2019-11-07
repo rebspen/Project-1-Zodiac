@@ -41,7 +41,7 @@ class Game {
         if (this.finish){
             window.cancelAnimationFrame(animation);
             this.end()
-
+            
         }
     }
     
@@ -63,25 +63,25 @@ class Game {
     }
     
     updateElements(timestamp){
-
+        
         if (this.elements !== []){
             for (let i = 0; i < this.elements.length; i++) {
                 this.elements[i].update()
             }
         }
-
+        
         if (this.elements !== []){
             for (let i = 0; i < this.gems.length; i++) {
                 this.gems[i].update()
             }
         }
-
+        
         if (this.asteroid !== []){
             for (let i = 0; i < this.asteroid.length; i++) {
                 this.asteroid[i].update()
             }
         }
-
+        
         if (this.elements !== []){
             if (this.elements.length > 25){
                 this.elements.splice(0,1);
@@ -106,20 +106,20 @@ class Game {
                     this.gemTimer = timestamp;
                 }
             }
-
+            
             if (this.asteroid !== []){
                 if (this.asteroid.length > 30){
                     this.asteroid.splice(0,1);
                 }
             }
-
+            
             if (this.asteroid.length < 32){
                 if(this.asteroidTimer < timestamp - this.asteroidSpeed){
                     this.asteroid.push(new Asteroid(this));
                     this.asteroidTimer = timestamp;
                 }
             }
-
+            
             
             for (let i = 0; i < this.elements.length; i++) {
                 if (this.starsign.checkCollision(this.starsign, this.elements[i])) {
@@ -127,73 +127,94 @@ class Game {
                     const value = this.starsign.element[ele];
                     this.score += value ;
                     this.elements.splice(i, 1);
-                    let sound = new Audio("/Blop-Mark_DiAngelo-79054334.mp3");
-                    sound.play()
+                    if (value > 0) {
+                        if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                        let sound = new Audio("/Blop-Mark_DiAngelo-79054334.mp3");
+                        sound.play()}
+                    } else {
+                        if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                        let noise = new Audio("/Laser-SoundBible.com-602495617.mp3");
+                        noise.play()} 
+                    }
                 }
+                
             }
-            
-            for (let i = 0; i < this.gems.length; i++) {
-                if (this.starsign.checkCollision(this.starsign, this.gems[i])) {
-                    const ele = this.gems[i].type;
-                    const value = this.starsign.element[ele];
-                    this.score += value;
-                    this.gems.splice(i, 1);
+        }
+        
+        for (let i = 0; i < this.gems.length; i++) {
+            if (this.starsign.checkCollision(this.starsign, this.gems[i])) {
+                const ele = this.gems[i].type;
+                const value = this.starsign.element[ele];
+                this.score += value;
+                this.gems.splice(i, 1);
+                if (value === 30) {
+                    if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
                     let sound = new Audio("/shooting_star-Mike_Koenig-1132888100.mp3");
                     sound.play()
                 }
             }
-
-            for (let i = 0; i < this.asteroid.length; i++) {
-                if (this.starsign.checkCollision(this.starsign, this.asteroid[i])) {
-                    let sound = new Audio("/Bite-SoundBible.com-2056759375.mp3");
-                    sound.play()
-                    this.stop();
-                }
+                if (value === 0){
+                    if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                    let noise = new Audio("/Laser-SoundBible.com-602495617.mp3");
+                    noise.play()
+                } 
+            }
             }
         }
-    }
         
-    stop(){
-        this.finish = true;
-    }
-
-    end(){
-        this.context.clearRect(0, 0, 500, 500);
-        this.drawGrid()
-        this.horoscope.draw();
-        if (this.score> this.highScore){
-         this.highScore = this.score
+        for (let i = 0; i < this.asteroid.length; i++) {
+            if (this.starsign.checkCollision(this.starsign, this.asteroid[i])) {
+                if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
+                let sound = new Audio("/Bite-SoundBible.com-2056759375.mp3");
+                sound.play()
+            }
+            this.stop();
         }
-        this.scoreboard.draw()
-        $reset.style.display = "inline-block"
-        $signbtn.innerText = "choose new date"
-        this.horoscope.random()
     }
+}
 
-    reset(){
-        $signbtn.innerText = "your sign is..."
-        $reset.style.display = "none"
-        this.asteroid = [];
-        this.elements = [];
-        this.gems = [];
-        this.elementTimer = 0
-        this.speed = 300
-        this.gemTimer = 0
-        this.gemspeed = 1000
-        this.asteroidTimer = 0
-        this.asteroidSpeed = 500
-        this.score = 0 
-        this.finish = false
+
+stop(){
+    this.finish = true;
+}
+
+end(){
+    this.context.clearRect(0, 0, 500, 500);
+    this.drawGrid()
+    this.horoscope.draw();
+    if (this.score> this.highScore){
+        this.highScore = this.score
     }
-    
+    this.scoreboard.draw()
+    $reset.style.display = "inline-block"
+    $signbtn.innerText = "choose new date"
+    this.horoscope.random()
+}
+
+reset(){
+    $signbtn.innerText = "your sign is..."
+    $reset.style.display = "none"
+    this.asteroid = [];
+    this.elements = [];
+    this.gems = [];
+    this.elementTimer = 0
+    this.speed = 300
+    this.gemTimer = 0
+    this.gemspeed = 1000
+    this.asteroidTimer = 0
+    this.asteroidSpeed = 500
+    this.score = 0 
+    this.finish = false
+}
 
 
-    drawGrid() {
-        this.context.strokeStyle = 'white';
-        this.context.beginPath();
-        this.context.arc(250, 250, 250, 0, 2 * Math.PI);
-        this.context.closePath();
-        this.context.stroke();
-    }   
-    
+
+drawGrid() {
+    this.context.strokeStyle = 'white';
+    this.context.beginPath();
+    this.context.arc(250, 250, 250, 0, 2 * Math.PI);
+    this.context.closePath();
+    this.context.stroke();
+}   
+
 }

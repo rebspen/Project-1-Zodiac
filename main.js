@@ -27,7 +27,7 @@ let audio = new Audio("Solar Empire - Beneath The Stars (Atmospheric Ambient Mix
 document.getElementById("sound-pic").onclick = function() {
     if (document.getElementById("sound-pic").src === "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"){
         document.getElementById("sound-pic").src = "http://127.0.0.1:5502/Game%20Images/speaker%20(3).png"
-        audio.paused()
+        audio.pause()
     } else{
         document.getElementById("sound-pic").src = "http://127.0.0.1:5502/Game%20Images/speaker%20(2).png"
         audio.play()

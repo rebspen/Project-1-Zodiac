@@ -100,7 +100,6 @@ img{
   font-size: 10px;
   background-color:purple;
   color: #fff;
-  padding: 5px 5px;
   border: 0;
   box-shadow: 0;
   border-radius: 2px;
@@ -109,6 +108,8 @@ img{
 
 #sound img{
   width: 10px;
+  padding: 5px 5px;
+
 }
 
 .game-board{
