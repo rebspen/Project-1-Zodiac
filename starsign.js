@@ -38,8 +38,8 @@ class Starsign {
                 topaz: 0,
                 lapiz: 0,
                 amethyst: 0,
-                moonstone:0,
-                pic: 'http://127.0.0.1:5502/Game%20Images/diamond.png',
+                moonstone:0, 
+                pic: 'https://zodiaction.netlify.com/Game%20Images/diamond.png',
                 name: "Diamond",
                 traits: "Ambitious <br> Independent <br> Impatient"
                 
@@ -66,7 +66,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/emerald.png", 
+                pic: "https://zodiaction.netlify.com/Game%20Images/emerald.png", 
                 name: "Emerald",
                 traits: "Dependable <br> Musical <br> Practical"
 
@@ -92,7 +92,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/emerald.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/emerald.png",
                 name: "Emerald",
                 traits: "Curious <br> Affectionate <br> Kind"
 
@@ -118,7 +118,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/ruby.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/ruby.png",
                 name: "Ruby",
                 traits: "Intuitive <br> Emotional <br> Passionate"
 
@@ -144,7 +144,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/carnelian.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/carnelian.png",
                 name: "Carnelian",
                 traits: "Proud <br> Bold <br> Ambitious"
 
@@ -171,7 +171,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/peridot.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/peridot.png",
                 name: "Peridot",
                 traits: "Graceful <br> Organised <br> Kind" 
 
@@ -198,7 +198,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/sapphire.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/sapphire.png",
                 name: "Sapphire",
                 traits: "Diplomatic <br> Artistic <br> Intelligent"
 
@@ -225,7 +225,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/opal.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/opal.png",
                 name: "Opal",
                 traits: "Seductive <br> Passionate <br> Independent" 
 
@@ -252,7 +252,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/topaz.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/topaz.png",
                 name: "Topaz",
                 traits: "Adventurous <br> Creative <br> Strong Willed" 
 
@@ -278,7 +278,7 @@ class Starsign {
                 lapiz: 30,
                 amethyst: 0,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/lapiz.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/lapiz.png",
                 name: "Lapiz",
                 traits: "Detail-Orientated <br> Intelligent <br> Hard Working" 
 
@@ -304,7 +304,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 30,
                 moonstone:0,
-                pic: "http://127.0.0.1:5502/Game%20Images/amethyst.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/amethyst.png",
                 name: "Amethyst", 
                 traits: "Imaginative <br> Idealistic <br> Intuitive" 
     
@@ -329,7 +329,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone:30,
-                pic: "http://127.0.0.1:5502/Game%20Images/moonstone.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/moonstone.png",
                 name: "Moonstone",
                 traits: "Creative <br> Sensitive <br> Idealistic" 
     
@@ -355,7 +355,7 @@ class Starsign {
                 lapiz: 0,
                 amethyst: 0,
                 moonstone: 0,
-                pic: "http://127.0.0.1:5502/Game%20Images/diamond.png",
+                pic: "https://zodiaction.netlify.com/Game%20Images/diamond.png",
                 name: "Diamond",
                 traits: "Creative <br> Sensitive <br> Artistic"
             
