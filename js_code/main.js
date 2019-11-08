@@ -22,7 +22,7 @@ let game;
 
 console.dir(document.getElementById("sound-pic"));
 
-let audio = new Audio("Solar Empire - Beneath The Stars (Atmospheric Ambient Mix) pt3.mp3");
+let audio = new Audio("/Sounds/Solar Empire - Beneath The Stars (Atmospheric Ambient Mix) pt3.mp3");
 
 document.getElementById("sound").onclick = function() {
     if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){

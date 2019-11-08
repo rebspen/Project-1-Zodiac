@@ -130,11 +130,11 @@ class Game {
                     this.elements.splice(i, 1);
                     if (value > 0) {
                         if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
-                        let sound = new Audio("/Blop-Mark_DiAngelo-79054334.mp3");
+                        let sound = new Audio("Sounds/Blop-Mark_DiAngelo-79054334.mp3");
                         sound.play()}
                     } else {
                         if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
-                        let noise = new Audio("/Laser-SoundBible.com-602495617.mp3");
+                        let noise = new Audio("Sounds/Laser-SoundBible.com-602495617.mp3");
                         noise.play()} 
                     }
                 }
@@ -150,14 +150,14 @@ class Game {
                     this.score += value;
                     this.gems.splice(i, 1);
                     if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
-                    let sound = new Audio("/pin_dropping-Brian_Rocca-2084700791.mp3");
+                    let sound = new Audio("Sounds/pin_dropping-Brian_Rocca-2084700791.mp3");
                     sound.play()
                 }
             }
                 if (value === 0){
                     this.bounceBack(this.starsign, this.gems[i]);
                     if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
-                    let noise = new Audio("/Glass Breaking-SoundBible.com-1765179538.mp3");
+                    let noise = new Audio("Sounds/Glass Breaking-SoundBible.com-1765179538.mp3");
                     noise.play()
                 } 
             }
@@ -167,7 +167,7 @@ class Game {
         for (let i = 0; i < this.asteroid.length; i++) {
             if (this.starsign.checkCollision(this.starsign, this.asteroid[i])) {
                 if (document.getElementById("sound-pic").src === "https://zodiaction.netlify.com/Game%20Images/speaker%20(2).png"){
-                let sound = new Audio("/Bite-SoundBible.com-2056759375.mp3");
+                let sound = new Audio("Sounds/Bite-SoundBible.com-2056759375.mp3");
                 sound.play()
             }
             this.stop();
