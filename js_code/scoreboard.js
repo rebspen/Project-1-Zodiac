@@ -4,6 +4,8 @@ class Scoreboard {
     }
     
     draw(){
+        game.context.shadowBlur = 5;
+        game.context.shadowColor = "silver";
         const context = this.game.context;
         
         const score = this.game.score;
@@ -14,9 +16,13 @@ class Scoreboard {
         
         context.fillText(`Score: ${score}`, 220, 450);
         context.fillText(`High Score: ${highScore}`, 220, 470);
+        game.context.shadowColor = "transparent";
     }
 
     intro(){
+        game.context.shadowBlur = 5;
+        game.context.shadowColor = "silver";
+
         const context = this.game.context;
         context.font = '18px monospace';
         context.fillStyle = 'white';
@@ -27,6 +33,8 @@ class Scoreboard {
         context.fillText(`need to collect --->`,100, 260);
         context.fillText(`Look out for your lucky `,100, 280);
         context.fillText(`gem and avoid asteroids!`,100, 300);
+
+        game.context.shadowColor = "transparent";
          
     }
 }

@@ -29,6 +29,8 @@ class Horoscope {
         const score = this.game.score;
         context.font = '15px monospace';
         context.fillStyle = 'white';
+        game.context.shadowBlur = 5;
+        game.context.shadowColor = "silver";
         
         if (score <= 0){
             context.fillText(`Really you think you deserve`, 50, 200);
@@ -42,6 +44,7 @@ class Horoscope {
             context.fillText(this.a5, 50, 280);
             context.fillText(this.a6,50, 300);
         }
+        game.context.shadowColor = "transparent";
     }
     
     
