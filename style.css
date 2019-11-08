@@ -4,6 +4,14 @@
   font-family: 'Space Mono', monospace;
 }
 
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+
 body {
   padding-top: 40px;
   text-align: center;
