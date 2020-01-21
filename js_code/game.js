@@ -35,7 +35,6 @@ class Game {
     }
     
     animation (timestamp) {
-        console.log(this.starsign.direction)
         this.drawEverything();
         this.updateElements(timestamp);
         const animation = window.requestAnimationFrame((timestamp) => this.animation(timestamp));

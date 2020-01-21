@@ -45,8 +45,6 @@ document.getElementById("star-sign-button").onclick = function() {
     birthday.month = document.getElementById("date").valueAsDate.getMonth();
     birthday.date = document.getElementById("date").valueAsDate.getDate();
 
-    console.log(birthday.month);
-    console.log(birthday.date);
 
     $reset.style.display = "none";
     $signbtn.style.display = "none";
@@ -97,7 +95,7 @@ document.getElementById("star-sign-button").onclick = function() {
     $water.innerText = game.starsign.element.water
     $gemname.innerText = game.starsign.element.name
     $traits.innerHTML = game.starsign.element.traits
-    console.log(game.starsign.element)
+
 
     $gem.src = game.starsign.element.pic
     game.context.clearRect(0, 0, 500, 500);
