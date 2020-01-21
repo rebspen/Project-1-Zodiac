@@ -130,6 +130,11 @@ img{
   padding: 0 20px;
 }
 
+canvas{
+  border:1px solid white;
+  box-shadow: 0 0 10px silver;
+}
+
 #guide{
   margin-left: 20px;
   margin-top: 5px;
