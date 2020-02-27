@@ -42,13 +42,16 @@ p {
   text-shadow: 0 0 10px silver;
 }
 
-.particles-js-canvas-el{
-  height: 500px !important;;
-  width: 500px !important;;
-  margin : none;
-  position: absolute;
-  right: 330px;
-  border: none;
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .particles-js-canvas-el{
+      height: 500px !important;;
+      width: 500px !important;;
+      margin : none;
+      position: absolute;
+      right: 330px;
+      border: none;
+    }
 }
 
 img{

@@ -1,63 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="/Game Images/favicon.ico" />
-  <title>Zodiac</title>
-</head>
-<body>
-  <div class="game-intro">
-    <h1>ZODIAC</h1>
-    <br>
-    <input id = "date" type="date" value="1992-03-31" min="1950-01-01" max="2010-01-01">
-    <br>
-    <button id="star-sign-button">Your sign is....</button>
-    <h2 class = starsign > Choose <br> your <br> sign</h2>
-    <p id = "traits"></p>
-    <br>
-    <button id="start-button">Start Your Adventure</button>
-    <br>
-    <button id="reset-button">Play Again</button>
-    <br>
-    <button id ="sound"><img id = "sound-pic" src= "Game Images/speaker (2).png"></button>
-  </div>
-  <div class ="game-board">
-    <div id="particles-js" > 
-      <canvas width = "500" height = "500" ></canvas>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="/Game Images/favicon.ico" />
+    <title>Zodiac</title>
+  </head>
+  <body>
+    <div class="game-intro">
+      <h1>ZODIAC</h1>
+      <br />
+      <input
+        id="date"
+        type="date"
+        value="1992-03-31"
+        min="1950-01-01"
+        max="2010-01-01"
+      />
+      <br />
+      <button id="star-sign-button">Your sign is....</button>
+      <h2 class="starsign">
+        Choose <br />
+        your <br />
+        sign
+      </h2>
+      <p id="traits"></p>
+      <br />
+      <button id="start-button">Start Your Adventure</button>
+      <br />
+      <button id="reset-button">Play Again</button>
+      <br />
+      <button id="sound">
+        <img id="sound-pic" src="Game Images/speaker (2).png" />
+      </button>
     </div>
-  </div>
-  <div id = "guide">
-    <img src = "Game Images/leaf (1).png">
-    <p id = "earth">...</p>
-    <br>
-    <img src = "Game Images/fire.png">
-    <p id = "fire">...</p>
-    <br>
-    <img src = "Game Images/cloud.png">
-    <p id = "air">...</p>
-    <br>
-    <img src = "Game Images/raindrop.png">
-    <p id = "water">...</p>
-    <br>
-    <img id = "gem" src = "">
-    <p id = "gem-name"> </p>
-    <p>+30</p>
-    <img class= "controls" src = "Game Images/controls.png">
-  </div>
-  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script type="text/javascript" src="js_code/sky.js"></script>
-  <script type="text/javascript" src="js_code/starsign.js"></script>
-  <script type="text/javascript" src="js_code/elements.js"></script>
-  <script type="text/javascript" src="js_code/controls.js"></script>
-  <script type="text/javascript" src="js_code/scoreboard.js"></script>
-  <script type="text/javascript" src="js_code/gems.js"></script>
-  <script type="text/javascript" src="js_code/asteroid.js"></script>
-  <script type="text/javascript" src="js_code/horoscope.js"></script>
-  <script type="text/javascript" src="js_code/game.js"></script>
-  <script type="text/javascript" src="js_code/main.js"></script>
-</body>
+    <div class="game-board">
+      <div id="particles-js">
+        <canvas width="500" height="500"></canvas>
+      </div>
+    </div>
+    <div id="guide">
+      <img src="Game Images/leaf (1).png" />
+      <p id="earth">...</p>
+      <br />
+      <img src="Game Images/fire.png" />
+      <p id="fire">...</p>
+      <br />
+      <img src="Game Images/cloud.png" />
+      <p id="air">...</p>
+      <br />
+      <img src="Game Images/raindrop.png" />
+      <p id="water">...</p>
+      <br />
+      <img id="gem" src="" />
+      <p id="gem-name"></p>
+      <p>+30</p>
+      <img class="controls" src="Game Images/controls.png" />
+    </div>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="js_code/sky.js"></script>
+    <script type="text/javascript" src="js_code/starsign.js"></script>
+    <script type="text/javascript" src="js_code/elements.js"></script>
+    <script type="text/javascript" src="js_code/controls.js"></script>
+    <script type="text/javascript" src="js_code/scoreboard.js"></script>
+    <script type="text/javascript" src="js_code/gems.js"></script>
+    <script type="text/javascript" src="js_code/asteroid.js"></script>
+    <script type="text/javascript" src="js_code/horoscope.js"></script>
+    <script type="text/javascript" src="js_code/game.js"></script>
+    <script type="text/javascript" src="js_code/main.js"></script>
+  </body>
 </html>
