@@ -42,11 +42,6 @@ p {
   text-shadow: 0 0 10px silver;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
-  
-}
-
 .particles-js-canvas-el{
   height: 500px !important;;
   width: 500px !important;;
